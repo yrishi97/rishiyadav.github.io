@@ -1,0 +1,518 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rishi Yadav | Vlogs</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background: #0D1117;
+            color: white;
+        }
+
+        /* Banner */
+
+        .banner {
+            height: 320px;
+            background:
+                linear-gradient(rgba(0, 0, 0, .55), rgba(0, 0, 0, .7)),
+                /* image("C:\port\Portfolio-main\img\object.jpg"), */
+                url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1600&q=80');
+            /* url('img/object.jpg'); */
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        .banner-content h1 {
+            font-size: 3rem;
+        }
+
+        .banner-content p {
+            margin-top: 10px;
+            color: #d0d0d0;
+        }
+
+        /* Profile */
+
+        .profile-section {
+            text-align: center;
+            margin-top: -70px;
+            padding: 20px;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            border: 5px solid #0D1117;
+            object-fit: cover;
+        }
+
+        .profile-name {
+            font-size: 2rem;
+            margin-top: 15px;
+        }
+
+        .profile-role {
+            color: #a7a7a7;
+            margin-top: 5px;
+        }
+
+        .stats-mini {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 20px;
+            flex-wrap: wrap;
+        }
+
+        .stats-mini div {
+            color: #d5d5d5;
+        }
+
+        .buttons {
+            margin-top: 25px;
+        }
+
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 30px;
+            margin: 5px;
+            cursor: pointer;
+            font-weight: 600;
+        }
+
+        .btn:hover {
+            text-decoration: underline;
+            /* Show underline on hover */
+        }
+
+        .primary {
+            background: #7C3AED;
+            color: white;
+            text-decoration: none;
+        }
+
+        .secondary {
+            background: #222;
+            color: white;
+            text-decoration: none;
+
+        }
+
+        /* Section */
+
+        .section {
+            width: 90%;
+            max-width: 1200px;
+            margin: 70px auto;
+        }
+
+        .section h2 {
+            margin-bottom: 25px;
+            font-size: 1.8rem;
+        }
+
+        .about {
+            color: #c8c8c8;
+            line-height: 1.8;
+        }
+
+        /* Featured Reel */
+
+        .featured-card {
+            background: #161B22;
+            border-radius: 20px;
+            overflow: hidden;
+            transition: .3s;
+        }
+
+        .featured-card img {
+            width: 100%;
+            display: block;
+            height: 420px;
+            object-fit: cover;
+        }
+
+        .featured-info {
+            padding: 20px;
+        }
+
+        /* Categories */
+
+        .categories {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .categories button {
+            padding: 10px 18px;
+            border: none;
+            border-radius: 30px;
+            background: #161B22;
+            color: white;
+            cursor: pointer;
+        }
+
+        .categories button:hover {
+            background: #7C3AED;
+        }
+
+        /* Reel Grid */
+
+        .video-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+        }
+
+        .video-card {
+            background: #161B22;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: .3s;
+            cursor: pointer;
+        }
+
+        .video-card:hover {
+            transform: translateY(-6px);
+        }
+
+        .video-card img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+        }
+
+        .video-info {
+            padding: 15px;
+        }
+
+        .video-info h4 {
+            margin-bottom: 8px;
+        }
+
+        .video-info p {
+            color: #bdbdbd;
+            font-size: .9rem;
+        }
+
+        /* Stats */
+
+        .big-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .stat-box {
+            background: #161B22;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+        }
+
+        .stat-box h3 {
+            font-size: 2rem;
+            color: #7C3AED;
+        }
+
+        /* Blogs */
+
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .blog-card {
+            background: #161B22;
+            border-radius: 15px;
+            padding: 20px;
+        }
+
+        .blog-card h4 {
+            margin-bottom: 10px;
+        }
+
+        .blog-card p {
+            color: #bcbcbc;
+            font-size: .95rem;
+            line-height: 1.7;
+        }
+
+        /* Footer */
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: #888;
+        }
+
+        /* Mobile */
+
+        @media(max-width:768px) {
+
+            .banner {
+                height: 250px;
+            }
+
+            .banner-content h1 {
+                font-size: 2rem;
+            }
+
+            .profile-img {
+                width: 110px;
+                height: 110px;
+            }
+
+            .profile-name {
+                font-size: 1.5rem;
+            }
+
+            .featured-card img {
+                height: 250px;
+            }
+
+            .video-card img {
+                height: 280px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Banner -->
+
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Learn • Build • Teach</h1>
+            <p>Technology, Education & Career Insights</p>
+        </div>
+    </section>
+
+    <!-- Profile -->
+
+    <section class="profile-section">
+
+        <img class="profile-img" src="img/rishifinal.jpg" alt="profile">
+
+        <h2 class="profile-name">Rishi Yadav</h2>
+
+        <p class="profile-role">
+            Developer | Technical Educator | AI Trainer
+        </p>
+
+        <!-- <div class="stats-mini">
+            <div>🎥 10+ Videos</div>
+            <div>📝 20+ Blogs</div>
+            <div>🎓 500+ Students</div>
+        </div> -->
+
+        <div class="buttons">
+            <a href="https://youtube.com/@codeTheVibe" target="_blank" class="btn primary">
+                Subscribe
+                <a href="https://yrishi97.github.io/rishiyadav" target="_blank" class="btn secondary">
+                    Portfolio
+                </a>
+        </div>
+
+    </section>
+
+    <!-- About -->
+
+    <section class="section">
+
+        <h2>About Me</h2>
+
+        <p class="about">
+            I create short educational videos on Computer Science,
+            Programming, Web Development,
+            Teaching Strategies and AI Tools. My goal is to make
+            technical concepts easy and engaging for students and
+            aspiring professionals.
+        </p>
+
+    </section>
+
+    <!-- Featured -->
+
+    <!-- <section class="section">
+
+        <h2>Featured Reel</h2>
+
+        <div class="featured-card">
+
+            <img src="https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=1200" alt="featured">
+
+            <div class="featured-info">
+                <h3>How HTTPS Actually Works</h3>
+                <p>1.2K Views • 1 Min</p>
+            </div>
+
+        </div>
+
+    </section> -->
+
+    <!-- Categories -->
+
+    <section class="section">
+
+        <h2>Categories</h2>
+
+        <div class="categories">
+
+            <button>All</button>
+            <button>Programming</button>
+            <button>Teaching</button>
+            <button>AI</button>
+            <button>Career</button>
+            <button>Web Development</button>
+
+        </div>
+
+    </section>
+
+    <!-- Videos -->
+
+    <section class="section">
+
+        <h2>Latest Reels</h2>
+
+        <div class="video-grid">
+
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600">
+                <div class="video-info">
+                    <h4>Python in 60 Seconds</h4>
+                    <p>1 Minute Reel</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600">
+                <div class="video-info">
+                    <h4>DBMS Explained</h4>
+                    <p>1 Minute Reel</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600">
+                <div class="video-info">
+                    <h4>OOP Concepts</h4>
+                    <p>45 Seconds Reel</p>
+                </div>
+            </div>
+
+            <div class="video-card">
+                <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600">
+                <div class="video-info">
+                    <h4>Teaching Tips</h4>
+                    <p>1 Minute Reel</p>
+                </div>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Stats -->
+
+    <section class="section">
+
+        <h2>Content Overview</h2>
+
+        <div class="big-stats">
+
+            <div class="stat-box">
+                <h3>50+</h3>
+                <p>Videos</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>20+</h3>
+                <p>Blogs</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>500+</h3>
+                <p>Students Taught</p>
+            </div>
+
+            <div class="stat-box">
+                <h3>3+</h3>
+                <p>Years Experience</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Blogs -->
+
+    <section class="section">
+
+        <h2>Recent Blogs</h2>
+
+        <div class="blog-grid">
+
+            <div class="blog-card">
+                <h4>How to Teach DBMS Effectively</h4>
+                <p>Practical classroom strategies for improving engagement and understanding.</p>
+            </div>
+
+            <div class="blog-card">
+                <h4>Frontend Development Roadmap</h4>
+                <p>A complete beginner-to-advanced guide for aspiring web developers.</p>
+            </div>
+
+            <div class="blog-card">
+                <h4>KVS Interview Preparation</h4>
+                <p>Common questions and strategies to prepare for teaching interviews.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer>
+        © 2026 Rishi Yadav | Learn • Build • Teach
+    </footer>
+
+    <script>
+
+        const cards = document.querySelectorAll(".video-card");
+
+        cards.forEach(card => {
+            card.addEventListener("click", () => {
+                alert("Open Reel Here");
+            });
+        });
+
+    </script>
+
+</body>
+
+</html>
+```
